@@ -24,13 +24,13 @@ function #ease:
 
 | 引数名 | 必須 | 型 | 説明 |
 | -: | :-: | :-: | :- |
-| tick.now | o | float | 経過時間 |
+| tick.x | o | float | 経過時間 |
 | tick.end | o | float | 終了時間 |
 | bezier | - | Handle | float型のXY座標リストを2つ格納したリスト |
 | bounce | - | float | 未実装 |
 | elastic | - | float | 未実装 |
-| value.min | o | float | tick.nowが0の時の最小値 |
-| value.max | o | float | tick.nowがtick.endと同じときの最大値 |
+| value.min | o | float | tick.xが0の時の最小値 |
+| value.max | o | float | tick.xがtick.endと同じときの最大値 |
 
 
 ## ライセンス
