@@ -22,11 +22,11 @@
     function ease:bezier/loop
 
 
-# calc.max = max - min
-    data modify storage ease: calcIn.x set from storage ease: in.value.max
-    data modify storage ease: calcIn.y set from storage ease: in.value.min
+# end_ = end - start
+    data modify storage ease: calcIn.x set from storage ease: in.value.end
+    data modify storage ease: calcIn.y set from storage ease: in.value.start
     function ease:calc/sub
-    data modify storage ease: _.max set from storage ease: out
+    data modify storage ease: _.end set from storage ease: out
 
 
 # t = (t1 + t2) / 2
@@ -88,10 +88,10 @@
     data modify storage ease: calcIn.y set from storage ease: _.y3
     function ease:calc/add
 
-    # out = x * calc.max + min
+    # out = x * end_ + start
     data modify storage ease: calcIn.x set from storage ease: out
-    data modify storage ease: calcIn.y set from storage ease: _.max
+    data modify storage ease: calcIn.y set from storage ease: _.end
     function ease:calc/mul
     data modify storage ease: calcIn.x set from storage ease: out
-    data modify storage ease: calcIn.y set from storage ease: in.value.min
+    data modify storage ease: calcIn.y set from storage ease: in.value.start
     function ease:calc/add

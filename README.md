@@ -15,7 +15,7 @@ MinecraftJE 1.19.4
 ease: in ストレージに以下のようなデータを入力してfunction実行
 ```mcfunction
 ## 例
-data modify storage ease: in set value {tick:{x:50f,end:100f},bezier:[[1f,0f],[0f,1f]],value:{min:0f,max:100f}}
+data modify storage ease: in set value {tick:{x:50f,end:100f},bezier:[[1f,0f],[0f,1f]],value:{start:0f,end:100f}}
 execute store result storage ease: in.tick.x float 1 run scoreboard players get <HOLDER> <OBJECTIVE>
 function #ease:
 ```
@@ -29,8 +29,8 @@ function #ease:
 | bezier | - | Handle | float型のXY座標リストを2つ格納したリスト |
 | bounce | - | float | 未実装 |
 | elastic | - | float | 未実装 |
-| value.min | o | float | tick.xが0の時の最小値 |
-| value.max | o | float | tick.xがtick.endと同じときの最大値 |
+| value.start | o | float | tick.xが0の時の最小値 |
+| value.end | o | float | tick.xがtick.endと同じときの最大値 |
 
 
 ## ライセンス
