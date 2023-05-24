@@ -5,4 +5,4 @@
 # @within tag/function ease:
 
 
-execute summon item_display run function ease:display
+execute summon text_display run function ease:display
