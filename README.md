@@ -20,6 +20,9 @@ execute store result storage ease: in.tick.x float 1 run scoreboard players get 
 function #ease:
 ```
 
+bezierの値は[cubic-bezier.com](https://cubic-bezier.com/)等で生成すると楽です
+
+
 ### 設定項目
 
 | 引数名 | 必須 | 型 | 説明 |
